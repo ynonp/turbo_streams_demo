@@ -1,0 +1,6 @@
+<%= form_for Message.new, url: messages_path, method: :POST do |f| %>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+  <%= f.submit :send %>
+<% end %>
+

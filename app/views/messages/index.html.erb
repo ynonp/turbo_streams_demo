@@ -1,8 +1,6 @@
 <h1>Messages#index</h1>
-<%= render partial: 'message', collection: @messages %>
+<div id="messages">
+  <%= render partial: 'message', collection: @messages %>
+</div>
 
-<%= form_for @message, url: messages_path, method: :POST do |f| %>
-  <%= f.label :text %>
-  <%= f.text_field :text %>
-  <%= f.submit :send %>
-<% end %>
+<%= render partial: 'new_message_form' %>
