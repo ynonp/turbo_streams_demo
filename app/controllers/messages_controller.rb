@@ -11,7 +11,6 @@ class MessagesController < ApplicationController
         format.html { redirect_to messages_path }
         format.turbo_stream do
           render turbo_stream: [
-            turbo_stream.append('messages', partial: 'message', locals: { message: @message }),
             turbo_stream.replace('new_message', partial: 'new_message_form')
           ]
         end
